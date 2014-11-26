@@ -24,14 +24,6 @@ server.pack.register({
 });
 
 server.route({
-	method: 'GET',
-	path: '/',
-	handler: function(request, reply){
-		return 'Poore Bingo';
-	}
-})
-
-server.route({
     method: 'GET',
     path: '/game',
     handler: function (request, reply) {
@@ -82,7 +74,16 @@ server.route({
 	}
 });
 
+server.route({
+    method: 'GET',
+    path: '/{param*}',
+    handler: {
+        directory: {
+            path: 'public/app'
+        }
+    }
+});
  
 server.start(function () {
-    console.log('Server running at:', server.info.uri);
+    console.log('API server running at:', server.info.uri);
 });

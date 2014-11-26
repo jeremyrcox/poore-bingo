@@ -1,0 +1,24 @@
+/* app css stylesheet */
+
+.game-board{
+  padding: 2em;
+}
+
+.game-board ul{
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+}
+
+.game-board li{
+  list-style: none;
+  margin: 0;
+  display: inline-block;
+  width: 16%;
+  text-align: center;
+  border-right: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  margin-left: -1px;
+  padding: 4% 2%;
+}
