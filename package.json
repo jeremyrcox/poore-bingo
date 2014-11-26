@@ -1,0 +1,17 @@
+{
+  "name": "poore-bingo",
+  "version": "1.0.0",
+  "description": "Poore Bingo!",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeremy Cox",
+  "license": "",
+  "dependencies": {
+    "hapi": "^7.5.2",
+    "hapi-mongodb": "^2.2.0",
+    "joi": "^4.9.0",
+    "shuffle-array": "0.0.2"
+  }
+}
