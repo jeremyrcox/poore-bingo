@@ -5,6 +5,7 @@ angular.module('app', [
   'ngRoute',
   'restangular',
   'app.main',
+  'angular-lodash'
   //'app.view2',
   //'app.version'
 ])

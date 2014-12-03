@@ -1,5 +1,5 @@
 <div class="game-board">
 	<ul class="small-block-grid-5">
-		<li ng-repeat="word in ::vm.words" ng-click="vm.toggleSpace(word, $index)">{{::word.word}}</li>
+		<li ng-repeat="word in ::vm.words" ng-click="vm.toggleSpace(word, $index)" ng-class="{covered: vm.isCovered($index)}">{{::word.word}}</li>
 	</ul>
 </div>

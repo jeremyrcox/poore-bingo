@@ -21,8 +21,17 @@
 		});
 
 		vm.toggleSpace = function(word, index){
-			//covered.push(word);
-			$log.log(word, index);
+			if(isCovered(index)){
+				covered.splice(covered.indexOf(index), 1);
+			}else{
+				covered.push(index);
+			}
 		};
+
+		var isCovered = function(index){
+			return (covered.indexOf(index) >=0);
+		};
+
+		vm.isCovered = isCovered;
 	}]);
 })();

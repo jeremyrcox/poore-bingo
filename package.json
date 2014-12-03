@@ -2,7 +2,7 @@
   "name": "poore-bingo",
   "version": "1.0.0",
   "description": "Poore Bingo!",
-  "main": "server/index.js",
+  "main": "server/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
