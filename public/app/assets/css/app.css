@@ -1,22 +1,36 @@
 /* app css stylesheet */
 
-.game-board{
-  padding: 2em;
-}
-
 .game-board ul{
   border-top: 1px solid #aaa;
   border-left: 1px solid #aaa;
 }
 
 .game-board li{
-  text-align: center;
-  border-right: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
-  padding: 4% 2%;
-  cursor: pointer;
+	position: relative;
+	border-right: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+	padding: 1%;
+	cursor: pointer;
+	height: 4rem;
+	display: table;
+}
+
+.game-board li div{
+	font-size: .6875rem;
+	text-align: center;
+	word-break: break-word;
+	line-height: 1;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+@media only screen and (min-width: 40.063em) {
+	.game-board li div{
+		font-size: .75rem;
+	}
 }
 
 .game-board li.covered{
-	color: #f00;
+	color: #aaa;
+	background: #333;
 }
