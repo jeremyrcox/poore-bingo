@@ -15,23 +15,20 @@
 		var vm=this;
 		var covered = [];
 
-		//Words.game.getList().then(function(data){
 		Bingo.getWords.then(function(data){
 			vm.words = data;
 		});
 
 		vm.toggleSpace = function(word, index){
-			if(isCovered(index)){
-				covered.splice(covered.indexOf(index), 1);
+			if(Bingo.isCovered(index)){
+				Bingo.uncover(word, index);
 			}else{
-				covered.push(index);
+				Bingo.cover(word, index);
 			}
+
+			console.log(Bingo.score());
 		};
 
-		var isCovered = function(index){
-			return (covered.indexOf(index) >=0);
-		};
-
-		vm.isCovered = isCovered;
+		vm.isCovered = Bingo.isCovered;
 	}]);
 })();
