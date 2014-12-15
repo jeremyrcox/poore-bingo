@@ -26,9 +26,10 @@
 				Bingo.cover(word, index);
 			}
 
-			console.log(Bingo.score());
+			vm.hasBingo = Bingo.score();
 		};
 
 		vm.isCovered = Bingo.isCovered;
+		vm.hasBingo = false;
 	}]);
 })();
