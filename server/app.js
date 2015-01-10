@@ -4,14 +4,16 @@ var shuffle = require('shuffle-array');
 
 var dbOpts = {
 	"url": "mongodb://localhost:27017/pooreBingo",
-	"options": {
+	"settings": {
 		"db": {
 			"native_parser" : false
 		}
 	}
 };
 
-var server = new Hapi.Server(3000);
+var port = process.env.NODE_ENV == 'production' ? 80 : 3000;
+
+var server = new Hapi.Server(port);
 
 server.pack.register({
 	plugin: require('hapi-mongodb'),
