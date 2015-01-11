@@ -1,5 +1,6 @@
 var Hapi = require('hapi');
 var joi = require('joi');
+var hostname = require('os').hostname
 var shuffle = require('shuffle-array');
 
 var dbOpts = {
@@ -11,7 +12,7 @@ var dbOpts = {
 	}
 };
 
-var port = process.env.NODE_ENV == 'production' ? 80 : 3000;
+var port = (hostname == 'jeremyrcox') ? 80 : 3000;
 
 var server = new Hapi.Server(port);
 

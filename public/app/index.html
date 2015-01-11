@@ -20,28 +20,25 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <nav class="top-bar" data-topbar role="navigation">
+  <div ng-controller="TopBarCtrl">
+  <top-bar>
     <ul class="title-area">
       <li class="name">
         <h1><a href="/#/main">Poore Bingo</a></h1>
       </li>
-       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      <li toggle-top-bar class="menu-icon"><a href="">Menu</a></li>
     </ul>
 
-    <section class="top-bar-section">
+    <top-bar-section>
       <!-- Right Nav Section -->
-      <ul class="right">
-        <li class="active"><a href="#">Play</a></li>
-        <li><a href="#">Suggest Words</a></li>
+      <ul class="right small-text-center">
+        <li><a href="">Play</a></li>
+        <li><a href="" ng-click="challenge()">Challenge</a></li>
+        <li><a href="" ng-click="suggestWords()">Suggest Words</a></li>
       </ul>
-
-      <!-- Left Nav Section -->
-      <ul class="left">
-        <li><a href="#" class="button">Challenge</a></li>
-      </ul>
-    </section>
-  </nav>
+    </top-bar-section>
+  </top-bar>
+</div>
 
   <div class="row">
     <div ng-view class="panel small-12 columns"></div>
@@ -61,6 +58,7 @@
   <script src="components/bingo/bingo.js"></script>
   <script src="components/angular-lodash/angular-lodash.js"></script>
 
+  <script src="top-bar/top-bar.js"></script>
   <script src="main/main.js"></script>
   <!-- <script src="view2/view2.js"></script>
   <script src="components/version/version.js"></script>
