@@ -13,6 +13,7 @@ var dbOpts = {
 };
 
 var port = (hostname == 'jeremyrcox' || hostname == 'poorebingo') ? 80 : 3000;
+console.log(hostname, port)
 
 var server = new Hapi.Server(port);
 
