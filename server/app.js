@@ -88,6 +88,16 @@ server.route({
     }
 });
  
+server.route({
+    method: 'GET',
+    path: '/accepted-Speed_Bump',
+    config: {
+        handler: function(request, reply){
+            reply.redirect('/');
+        }
+    }
+});
+
 server.start(function () {
     console.log('Server running at:', server.info.uri);
 });

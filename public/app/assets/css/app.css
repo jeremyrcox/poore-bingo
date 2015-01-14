@@ -40,7 +40,7 @@
 .game-board li div{
 	font-size: .6875rem;
 	text-align: center;
-	word-break: break-all;
+	word-break: break-word;
 	line-height: 1;
 	display: table-cell;
 	vertical-align: middle;
