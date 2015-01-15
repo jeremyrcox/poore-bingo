@@ -87,11 +87,22 @@ server.route({
         }
     }
 });
- 
+
+//Redirects for BOA speed bump 
 server.route({
     method: 'GET',
     path: '/accepted-Speed_Bump',
     config: {
+        handler: function(request, reply){
+            reply.redirect('/');
+        }
+    }
+});
+
+server.route({
+    method: 'GET',
+    path: '/verify-Speed_Bump',
+    config:{
         handler: function(request, reply){
             reply.redirect('/');
         }
